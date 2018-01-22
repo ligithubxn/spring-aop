@@ -15,7 +15,7 @@ public class TestMain {
                 new ClassPathXmlApplicationContext("applicationContext.xml");
         HelloAop aop = (HelloAop) ctx.getBean("helloAop");
         aop.doPrint();
-        //
+
         
     }
 }

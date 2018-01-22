@@ -10,7 +10,7 @@ import org.aspectj.lang.annotation.*;
 @Aspect
 public class LogAnnotationAspect {
     @SuppressWarnings("unused")
-    //定义切入点，提供一个方法，这个方法的名字就是改切入点的id
+    //定义切入点，提供一个方法，这个方法的名字就是改切入点的id，对HelloAop进行切点，调用拦截
     @Pointcut("execution(* com.springaop.test.HelloAop.*(..))")
     private void allMethod(){}
     //针对指定的切入点表达式选择的切入点应用前置通知
@@ -19,6 +19,7 @@ public class LogAnnotationAspect {
         String className = call.getTarget().getClass().getName();
         String methodName = call.getSignature().getName();
         System.out.println("前置通知====:" + className + "类的"+ methodName + "方法");
+        //这个位置可以换成入库统计操作
     }
     //访问命名切入点来应用后置通知
     @AfterReturning("allMethod()")
@@ -29,6 +30,7 @@ public class LogAnnotationAspect {
     @After("allMethod()")
     public void after(){
         System.out.println("最终通知:不管方法是否正常结束我一定会调用我");
+        //这个位置可以换成根据需求入库统计操作
     }
     //应用异常抛出后通知
     @AfterThrowing("allMethod()")
