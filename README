@@ -1,26 +1,7 @@
-1、ImplArrayList 实现 ArrayList包括：
-       add()
-       remove()
-       get()
-       contains()
-       indexOf()
-       isEmpty()
+1、处理用户操作日志
+   a)、前置通知
+   b)、后置通知
+   c）、最终通知
+   d）、环绕通知
+   e)、异常异常抛出后通知
 
-      ArrayList的扩容的最大长度为最大二进制数减8
-
-      ArrayList的默认长度为10
-
-
-
-
-    
- 2、ImplLinkedList - > LinkedList
-
-        get()
-	    add()
-	    addFirst()
-	    addLast()
-	    remove()
-
-
-    #####未完待续#########
